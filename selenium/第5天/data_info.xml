@@ -1,0 +1,33 @@
+<info>
+	<base>
+		<platform>Windows</platform>
+		<platform2>Mac</platform2>
+		<platform3>liunx</platform3>
+		<browser>Firefox</browser>
+		<browser2>Chrome</browser2>
+		<browser3>IE</browser3>
+	</base>
+	<test>
+		<province>北京</province>
+		<province>广东</province>
+		<city>深圳</city>
+		<city>珠海</city>
+		<province>浙江</province>
+		<city>杭州</city>	
+	</test>
+	<user>
+		<mail>mail.qq.com</mail>
+		<name>448671246</name>
+		<pwd>Yy1987525</pwd>
+	</user>
+	<user>
+		<mail>www.126.com</mail>
+		<name>kiokyw</name>
+		<pwd>kiok19861121</pwd>
+	</user>
+	<user>
+		<mail>mail.163.com</mail>
+		<name>kiokyw</name>
+		<pwd>kiok19861121</pwd>
+	</user>
+</info>
