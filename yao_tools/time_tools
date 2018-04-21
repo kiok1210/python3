@@ -1,0 +1,60 @@
+import time
+import datetime
+from time import sleep
+
+t = "2017-11-24 17:30:00"
+#将其转换为时间数组
+timeStruct = time.strptime(t, "%Y-%m-%d %H:%M:%S")
+#转换为时间戳:
+timeStamp = int(time.mktime(timeStruct))
+print(timeStamp)
+
+#timeStamp = 1511515800
+localTime = time.localtime(timeStamp)
+print('localTime',localTime)
+strTime = time.strftime("%Y-%m-%d %H:%M:%S", localTime)
+print(strTime)
+
+t = "2017-11-24 17:30:00"
+#先转换为时间数组,然后转换为其他格式
+timeStruct = time.strptime(t, "%Y-%m-%d %H:%M:%S")
+strTime = time.strftime("%Y/%m/%d %H:%M:%S", timeStruct)
+print(strTime)
+
+
+#获得当前时间时间戳
+now = int(time.time())
+print('now:', now)
+
+sleep(2)
+
+now2 = int(time.time())
+print('now2', now2)
+
+nowdate = now2 - now
+print('共X秒', nowdate)
+
+
+#转换为其他日期格式,如:"%Y-%m-%d %H:%M:%S"
+timeStruct = time.localtime(now2)
+strTime = time.strftime("%Y-%m-%d %H:%M:%S", timeStruct)
+print('获得当前时间：', strTime)
+
+#先获得时间数组格式的日期 三天前
+threeDayAgo = (datetime.datetime.now() - datetime.timedelta(days = 3))
+#转换为时间戳:
+timeStamp = int(time.mktime(threeDayAgo.timetuple()))
+#转换为其他字符串格式:
+strTime = threeDayAgo.strftime("%Y-%m-%d %H:%M:%S %i")
+print(strTime)
+
+i = datetime.datetime.now()
+print ("当前的日期和时间是 %s" % i)
+print ("ISO格式的日期和时间是 %s" % i.isoformat() )
+print ("当前的年份是 %s" %i.year)
+print ("当前的月份是 %s" %i.month)
+print ("当前的日期是 %s" %i.day)
+print ("dd/mm/yyyy 格式是  %s/%s/%s" % (i.day, i.month, i.year) )
+print ("当前小时是 %s" %i.hour)
+print ("当前分钟是 %s" %i.minute)
+print ("当前秒是  %s" %i.second)
